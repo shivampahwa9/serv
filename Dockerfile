@@ -9,13 +9,14 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
 RUN apt-get install -yq nodejs
 
 # copy our application code
-ADD flask-app /opt/flask-app
-WORKDIR /opt/flask-app
+ADD serv /opt/serv
+WORKDIR /opt/serv
 
 # fetch app specific deps
 RUN npm install
 RUN npm run build
-RUN pip install -r requirements.txtRUN install json 
+RUN pip install -r requirements.txt 
+RUN install json 
 
 # expose port
 EXPOSE 5000
