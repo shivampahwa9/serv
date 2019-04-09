@@ -15,10 +15,10 @@ WORKDIR /opt/flask-app
 # fetch app specific deps
 RUN npm install
 RUN npm run build
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txtRUN install json 
 
 # expose port
 EXPOSE 5000
 
 # start app
-CMD [ "python", "./app.py" ]
+CMD [ "python", "./main.py" ]
